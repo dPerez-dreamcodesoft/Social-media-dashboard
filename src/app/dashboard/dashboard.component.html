@@ -1,0 +1,34 @@
+<div>
+    <h1>Social Media Dashboard</h1>
+    <h3>Total Followers: 23,004</h3>
+    <div class="card-row">
+        <div *ngFor="let cardDashboard of cardsDashboard">
+            <div>
+                <mat-card class="dashboard-card">
+                    <div *ngIf="cardDashboard.socialNetworkType==1">
+                        <div class="header-fb">
+                        </div>
+                    </div>
+                    <div *ngIf="cardDashboard.socialNetworkType==3">
+                        <div class="header-tw">
+                        </div>
+                    </div>
+                    <div class="card-nickname">
+                        <img mat-card-image class="img-network" src={{cardDashboard.socialNetworkIcon}}>
+                        <h4 class="card-title">{{cardDashboard.socialNetworkUsername}}</h4>
+                    </div>
+                    <div class="card-content">
+                        <h1 class="card-follower">{{cardDashboard.numberOfFollowers}}</h1>
+                        <h3 class="card-follower-type">{{cardDashboard.followerType}}</h3>
+                        <h3 class="card-date-today">{{cardDashboard.numberOfDays}} Today</h3>
+                    </div>
+
+                </mat-card>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

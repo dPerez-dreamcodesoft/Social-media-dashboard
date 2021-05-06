@@ -1,0 +1,60 @@
+
+  .header-color{
+    width: auto;
+    height: 5px;
+    background: linear-gradient(to right, #fdc468, #df4996);
+    margin-top: -6%;
+    margin-bottom: 39px;
+    margin-left: -5%;
+    
+  }
+  .header-fb{
+    background: hsl(208, 92%, 53%);
+    width: auto;
+    height: 5px;
+  }
+  .header-tw{
+    background: hsl(203, 89%, 53%);
+    width: auto;
+    height: 5px;
+  }
+  .img-network{
+      width: 7%;
+      height: 10%;
+      margin: 10px;
+  }
+  .card-nickname{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+  }
+  .card-row{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 35px;
+    margin: 40px;
+    font-family:'Inter', sans-serif;;
+  }
+  .card-title{
+    size: 14px;
+}
+.card-content{
+    text-align: center;
+}
+.dashboard-card{
+    background: #f0f2fa;
+}
+.card-follower{
+    color: hsl(230, 17%, 14%);
+    font-size: 50px;
+    font-weight: bold;
+}
+.card-follower-type{
+    color: hsl(228, 12%, 44%);
+    letter-spacing: 4px;
+}
+.card-date-today{
+    color: hsl(163, 72%, 41%);
+}
+  
