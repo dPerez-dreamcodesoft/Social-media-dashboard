@@ -13,6 +13,14 @@
                         <div class="header-tw">
                         </div>
                     </div>
+                    <div *ngIf="cardDashboard.socialNetworkType==2">
+                        <div class="header-ig">
+                        </div>
+                    </div>
+                    <div *ngIf="cardDashboard.socialNetworkType==4">
+                        <div class="header-yt">
+                        </div>
+                    </div>
                     <div class="card-nickname">
                         <img mat-card-image class="img-network" src={{cardDashboard.socialNetworkIcon}}>
                         <h4 class="card-title">{{cardDashboard.socialNetworkUsername}}</h4>
