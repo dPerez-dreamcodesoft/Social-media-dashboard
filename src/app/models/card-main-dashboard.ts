@@ -5,5 +5,6 @@ export interface CardMainDashboard{
     followerType:string;
     numberOfDays:number;
     socialNetworkType:number;
+    isPositive:boolean;
 
 }

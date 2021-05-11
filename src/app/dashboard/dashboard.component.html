@@ -1,42 +1,95 @@
-<div>
-    <h1>Social Media Dashboard</h1>
-    <h3>Total Followers: 23,004</h3>
-    <div class="card-row">
-        <div *ngFor="let cardDashboard of cardsDashboard">
-            <div>
-                <mat-card class="dashboard-card">
-                    <div *ngIf="cardDashboard.socialNetworkType==1">
-                        <div class="header-fb">
-                        </div>
-                    </div>
-                    <div *ngIf="cardDashboard.socialNetworkType==3">
-                        <div class="header-tw">
-                        </div>
-                    </div>
-                    <div *ngIf="cardDashboard.socialNetworkType==2">
-                        <div class="header-ig">
-                        </div>
-                    </div>
-                    <div *ngIf="cardDashboard.socialNetworkType==4">
-                        <div class="header-yt">
-                        </div>
-                    </div>
-                    <div class="card-nickname">
-                        <img mat-card-image class="img-network" src={{cardDashboard.socialNetworkIcon}}>
-                        <h4 class="card-title">{{cardDashboard.socialNetworkUsername}}</h4>
-                    </div>
-                    <div class="card-content">
-                        <h1 class="card-follower">{{cardDashboard.numberOfFollowers}}</h1>
-                        <h3 class="card-follower-type">{{cardDashboard.followerType}}</h3>
-                        <h3 class="card-date-today">{{cardDashboard.numberOfDays}} Today</h3>
-                    </div>
+<div id="main-page-id">
 
-                </mat-card>
-
+    <div class="main-page">
+        <div>
+            <h1 class="main-title-dashboard" id="main-title-id">Social Media Dashboard</h1>
+            <h3 class="total-followers">Total Followers: 23,004</h3>
+            <div class="switch">
+                <label class="lbl-dark">
+                    Dark Mode
+                    <mat-slide-toggle class="light-toogle" (click)="setToDarkMode()">
+                    </mat-slide-toggle>
+                </label>
             </div>
 
         </div>
 
-    </div>
+        <div class="card-row">
+            <div *ngFor="let cardDashboard of cardsDashboard">
+                <div>
+                    <mat-card class="dashboard-card" id="dashboard-card-id">
+                        <div *ngIf="cardDashboard.socialNetworkType==1">
+                            <div class="header-fb">
+                            </div>
+                        </div>
+                        <div *ngIf="cardDashboard.socialNetworkType==3">
+                            <div class="header-tw">
+                            </div>
+                        </div>
+                        <div *ngIf="cardDashboard.socialNetworkType==2">
+                            <div class="header-ig">
+                            </div>
+                        </div>
+                        <div *ngIf="cardDashboard.socialNetworkType==4">
+                            <div class="header-yt">
+                            </div>
+                        </div>
+                        <div class="card-nickname">
+                            <img mat-card-image class="img-network" src={{cardDashboard.socialNetworkIcon}}>
+                            <h4 class="card-title" id="card-title-id">{{cardDashboard.socialNetworkUsername}}</h4>
+                        </div>
+                        <div class="card-content">
+                            <h1 class="card-follower" id="follower-id">{{cardDashboard.numberOfFollowers}}</h1>
+                            <h3 class="card-follower-type" id="follower-type-id">{{cardDashboard.followerType}}</h3>
+                            <div class="card-bg-date" *ngIf="cardDashboard.isPositive">
+                                <img mat-card-image class="img-network" src='../../assets/dashboard/icon-up.svg'>
+                                <h3 class="card-date-today-positive">{{cardDashboard.numberOfDays}} Today</h3>
+                            </div>
+                            <div class="card-bg-date" *ngIf="!cardDashboard.isPositive">
+                                <img mat-card-image class="img-network" src='../../assets/dashboard/icon-down.svg'>
+                                <h3 class="card-date-today-negative">{{cardDashboard.numberOfDays}} Today</h3>
+                            </div>
 
+                        </div>
+
+                    </mat-card>
+
+                </div>
+
+            </div>
+
+        </div>
+        <h1 class="overview-class" id="overview-id">Overview - Today</h1>
+        <div class="card-row">
+            <div *ngFor="let cardOverview of cardsOverview">
+                <mat-card class="dashboard-card" id="dashboard-cards-id">
+                    <div class="overview-items">
+
+                        <h3 class="overview-class">{{cardOverview.socialNetworkUsername}}</h3>
+                        <div class="box">
+                            <img mat-card-image class="img-network-ov" src={{cardOverview.socialNetworkIcon}}>
+                        </div>
+
+                        <h1 class="card-follower" id="overview-follower-id">{{cardOverview.numberOfFollowers}}</h1>
+                        <div class="box">
+                            <div class="card-bg-date" *ngIf="cardOverview.isPositive">
+                                <img mat-card-image class="img-variation" src='../../assets/dashboard/icon-up.svg'>
+                                <h3 class="card-date-today-positive">{{cardOverview.numberOfDays}}%</h3>
+                            </div>
+                            <div class="card-bg-date" *ngIf="!cardOverview.isPositive">
+                                <img mat-card-image class="img-variation" src='../../assets/dashboard/icon-down.svg'>
+                                <h3 class="card-date-today-negative">{{cardOverview.numberOfDays}}%</h3>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </mat-card>
+
+            </div>
+        </div>
+
+    </div>
 </div>
