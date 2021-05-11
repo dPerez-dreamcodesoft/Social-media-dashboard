@@ -1,5 +1,4 @@
 <div id="main-page-id">
-
     <div class="main-page">
         <div>
             <h1 class="main-title-dashboard" id="main-title-id">Social Media Dashboard</h1>
@@ -17,23 +16,24 @@
         <div class="card-row">
             <div *ngFor="let cardDashboard of cardsDashboard">
                 <div>
+                    <div *ngIf="cardDashboard.socialNetworkType==1">
+                        <div class="header-fb">
+                        </div>
+                    </div>
+                    <div *ngIf="cardDashboard.socialNetworkType==3">
+                        <div class="header-tw">
+                        </div>
+                    </div>
+                    <div *ngIf="cardDashboard.socialNetworkType==2">
+                        <div class="header-ig">
+                        </div>
+                    </div>
+                    <div *ngIf="cardDashboard.socialNetworkType==4">
+                        <div class="header-yt">
+                        </div>
+                    </div>
                     <mat-card class="dashboard-card" id="dashboard-card-id">
-                        <div *ngIf="cardDashboard.socialNetworkType==1">
-                            <div class="header-fb">
-                            </div>
-                        </div>
-                        <div *ngIf="cardDashboard.socialNetworkType==3">
-                            <div class="header-tw">
-                            </div>
-                        </div>
-                        <div *ngIf="cardDashboard.socialNetworkType==2">
-                            <div class="header-ig">
-                            </div>
-                        </div>
-                        <div *ngIf="cardDashboard.socialNetworkType==4">
-                            <div class="header-yt">
-                            </div>
-                        </div>
+
                         <div class="card-nickname">
                             <img mat-card-image class="img-network" src={{cardDashboard.socialNetworkIcon}}>
                             <h4 class="card-title" id="card-title-id">{{cardDashboard.socialNetworkUsername}}</h4>

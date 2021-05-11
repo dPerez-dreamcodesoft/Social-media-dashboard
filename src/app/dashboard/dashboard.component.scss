@@ -27,35 +27,25 @@
 }
 .header-fb {
   background: hsl(208, 92%, 53%);
-  width: auto;
+  border-radius: 5px;
   height: 5px;
-  margin-top: -6%;
-  margin-bottom: 39px;
-  margin-left: -5%;
+  
 }
 .header-tw {
   background: hsl(203, 89%, 53%);
-  width: auto;
   height: 5px;
-  margin-top: -6%;
-  margin-bottom: 39px;
-  margin-left: -5%;
+  border-radius: 5px;
+  
 }
 .header-ig {
   background: linear-gradient(to right, #fdc468, #df4996);
-  width: auto;
   height: 5px;
-  margin-top: -6%;
-  margin-bottom: 39px;
-  margin-left: -5%;
+  border-radius: 5px;
 }
 .header-yt {
   background: hsl(348, 97%, 39%);
-  width: auto;
   height: 5px;
-  margin-top: -6%;
-  margin-bottom: 39px;
-  margin-left: -5%;
+  border-radius: 5px;
 }
 .img-network {
   width: 7%;
