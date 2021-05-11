@@ -93,7 +93,7 @@ export class DashboardComponent implements OnInit {
       followerType: '',
       numberOfDays: 2,
       socialNetworkType: this.FACEBOOK_COLOR,
-      isPositive: true,
+      isPositive: false,
     };
 
     let viewsInstagramCard: CardMainDashboard = {
